@@ -1,0 +1,29 @@
+<div class="mainContainer">
+    <div class="books">
+        <div *ngFor="let book of books" (click)="onSelect(book)"[class.selected]="book === selectedBook">
+            <div class="coverDiv"><img [src]="book.cover" alt="{{book.title}}"(click)="onSelect(book)"[class.selected]="book === selectedBook"></div>
+        </div>
+    </div>
+
+    <div class="selectedBookInfo" *ngIf="selectedBook">
+        <div class="coverDivSelected">
+            <img [src]="selectedBook.cover" alt="{{selectedBook.title}}">
+            <span class="rating">{{selectedBook.reviews | number: '1.1-1'}}</span>
+            <span class="price">{{selectedBook.price | currency:'USD ':'symbol':'1.2-2'}}</span>
+        </div>
+        <div class="info">
+            <h1>{{selectedBook.title}}</h1>
+            <div class="author">
+                <span><b>Author:</b></span>
+                <div class="authorName">{{ selectedBook.author}}
+                    <div class="authorPhoto"><img [src]="selectedBook.authorPhoto" alt="{{selectedBook.author}}"></div>
+                </div>
+            </div>
+            <p><b>Genre: </b>{{selectedBook.genre}}</p>
+            <p><b>Date: </b>{{selectedBook.date}}</p>
+            <p><b>Pages: </b>{{selectedBook.pages | number: '1.0-3'}}</p>
+            <p><b>Publisher: </b>{{selectedBook.publisher}}</p>
+            <p>{{selectedBook.description}}</p>         
+        </div>
+    </div>
+</div>

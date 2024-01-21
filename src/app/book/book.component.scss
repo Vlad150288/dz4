@@ -1,0 +1,162 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+p {
+    margin: 10px 0px;
+}
+
+span {
+    display: inline-block;
+    margin-right: 3px;
+}
+
+.books {
+    display: flex;
+    width: 935px;
+    border: 1px solid rgb(140, 140, 140);
+    border-radius: 10px;
+    background-color: rgb(87, 87, 87);
+    padding: 3px;
+    margin: 50px auto 10px;
+}
+
+.coverDiv {
+    height: 180px;
+}
+
+.coverDiv img {
+    width: 100%;
+    height: 100%;
+}
+
+.coverDivSelected {
+    height: 400px;
+    width: 280px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: end;
+}
+
+.coverDivSelected img {
+    width: 100%;
+    height: 100%;
+}
+
+.books>div {
+    border: 2px solid rgb(168, 168, 168);
+    margin: 5px;
+    width: 120px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.books>div:hover {
+    opacity: 1;
+    border: 2px solid rgb(180, 180, 180);
+}
+
+.books div.selected {
+    background-color: rgb(143, 187, 130);
+    color: white;
+}
+.books div.selected:hover {
+    background-color: rgb(118, 155, 106);
+}
+
+.selectedBookInfo {
+    color: rgb(237, 237, 237);
+    border: 1px solid rgb(168, 168, 168);
+    width: 920px;
+    background-color: rgb(91, 91, 91);
+    border-radius: 10px;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    position: relative;
+}
+
+.info {
+    width: 600px;
+    padding-left: 20px;
+}
+
+.info span {
+    font-size: 16px;
+}
+
+.books div.selected {
+    border: 2px solid rgb(231, 231, 231);
+    opacity: 1;
+}
+.books div.selected:hover {
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.author {
+    display: flex;
+}
+
+.authorPhoto {
+    position: absolute;
+    background-color: black;
+    width: 80px;
+    height: 120px;
+    z-index: -10;
+    opacity: 0;
+    top: -65px;
+    border: 2px solid rgb(237, 237, 237);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.authorPhoto:hover img {
+    position: absolute;
+}
+
+.authorName:hover .authorPhoto {
+    opacity: 1;
+    transition: all 0.4s;
+    z-index: 5;
+}
+
+.authorName {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.rating {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 15px;
+    text-align: center;
+    border: 3px solid rgb(237, 237, 237);
+    border-radius: 50%;
+    background-color: black;
+    color: rgb(237, 237, 237);
+}
+
+.price {
+    position: absolute;
+    text-align: center;
+    width: 100px;
+    margin: 15px;
+    padding: 5px;
+    top: 335px;
+    background-color: rgb(0, 0, 0);
+    border: 3px solid rgb(237, 237, 237);
+    border-radius: 20px;
+    color: rgb(237, 237, 237);
+}
